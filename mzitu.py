@@ -3,6 +3,7 @@ import re
 import os
 import time
 import sys
+import random
 from tqdm import tqdm
 from multiprocessing import Pool
 
@@ -131,7 +132,7 @@ class Mzitu:
             '<.*?="blur" src="(.*?)"').findall(response.text)[0]
         img = requests.Session().get(url=imgUrl, headers=self.headers)
 
-        fileName = str(index) + imgUrl[-4:]
+        fileName = str(index) + '-' + imgUrl[-9:]
 
         path = self.path + self.dir + self.pageNum + self.index + "_" + self.title
 
