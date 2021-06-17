@@ -8,5 +8,6 @@
     
 - 开始
     ```sh
+    $ pip install -r requirements
     $ python3 mzitu.py
     ```
